@@ -19,7 +19,8 @@ distclean: clean
 
 install: all
 	install -d $(DESTPREFIX)/$(DESTDIR)
-	install -c $(TARGET) $(DESTPREFIX)/$(DESTDIR)
+	install -c $(TARGET).so* $(DESTPREFIX)/$(DESTDIR)
+	install -c $(TARGET).a $(DESTPREFIX)/$(DESTDIR)
 
 install-doc:
 	install -d $(DESTPREFIX)/share/doc/libdl
