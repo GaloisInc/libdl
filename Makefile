@@ -5,7 +5,7 @@ CC=$(CROSS_COMPILE)gcc
 # likewise, if you want to change the destination prefix
 DESTPREFIX=/usr/local
 DESTDIR=lib
-TARGET=libdl
+TARGET=libdeadline
 DOCS=COPYING README
 RELEASE=$(shell basename `pwd`)
 
@@ -23,8 +23,8 @@ install: all
 	install -c $(TARGET).a $(DESTPREFIX)/$(DESTDIR)
 
 install-doc:
-	install -d $(DESTPREFIX)/share/doc/libdl
-	install -c $(DOCS) $(DESTPREFIX)/share/doc/libdl
+	install -d $(DESTPREFIX)/share/doc/libdeadline
+	install -c $(DOCS) $(DESTPREFIX)/share/doc/libdeadline
 
 release: distclean release_gz release_bz2
 	@echo --- $(RELEASE) released ---
